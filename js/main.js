@@ -7,8 +7,13 @@ console.log(emailList[0]);
 console.log(emailList[1]);
 console.log(emailList[2]);
 
+// avvio ciclo for
 for (var i = 0; i <= emailList.lenght; i++) {
-  console.log(emailList[i]);
+  if (email==emailList) {
+    console.log("è nella lista");
+  } else {
+    console.log("non è nella lista");
+  }
 }
 
-document.getElementById("welcome").innerHTML = "La tua mail è " + emailList;
+document.getElementById("welcome").innerHTML = "La tua mail " + email ;
