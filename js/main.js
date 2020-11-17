@@ -1,19 +1,23 @@
-var email = prompt("Inserisci la tua mail")
+var email = prompt("Inserisci il tuo nome")
+var result = document.getElementById('result')
 
 // array lista email
-var emailList = ["Gabriele", "Luca", "Marco"]
-
-console.log(emailList[0]);
-console.log(emailList[1]);
-console.log(emailList[2]);
+var emailList = ["gabriele", "luca", "marco"]
 
 // avvio ciclo for
-for (var i = 0; i <= emailList.lenght; i++) {
-  if (email==emailList) {
+var verify = false;
+
+for (var i = 0; i < emailList.length; i++) {
+  if (email==emailList[i]) {
     console.log("è nella lista");
-  } else {
-    console.log("non è nella lista");
+    verify = true;
   }
 }
 
-document.getElementById("welcome").innerHTML = "La tua mail " + email ;
+// se verify è vero sei in lista altrimenti no
+if (verify == true) {
+  result.innerHTML = "sei in lista"
+}
+else {
+  result.innerHTML = " non sei in lista"
+}
